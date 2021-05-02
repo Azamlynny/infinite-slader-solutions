@@ -7,13 +7,17 @@
       "content_scripts": [
         {
           "matches": [
-            "https://www.slader.com/*", "http://www.slader.com/*"
+            "<all_urls>"
           ],
-          "js": ["jquery-3.6.0.js", "content.js"]
+          "js": ["content.js"]
         }
       ],
       
       "browser_action": {
-    "default_icon": "myicon.png"
-    }
+        "default_icon": "myicon.png"
+      },
+
+      "background": {
+        "scripts": ["background.js"]
+      }
 }
